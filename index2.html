@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+
+   
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <title>Data Hoggers</title>
+  </head>
+  <body >
+
+   <h2 style="text-align: center;">Fill Your Details</h2>
+    
+ <div class="row">
+      
+
+        
+    <header style="text-align: center;">
+      
+    
+
+
+          
+
+        </header>
+        <main >
+          <form method="post" autocomplete="off" name="google-sheet">
+
+            <div class="form-item box-item">
+              <input type="text" name="Name" placeholder="Name*" value=""
+              required="" />
+            
+            </div>
+
+
+            <div class="form-item box-item">
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email*"
+                value=""
+                required=""
+                
+              />
+            
+            </div>
+
+            
+            <div class="form-item box-item">
+              <input type="text" name="Stream" placeholder="Stream*" value=""
+              required="" />
+            
+            </div>
+
+
+            <div class="form-item box-item">
+              <input type="text" name="Internship" placeholder="Internship*" value=""
+              required="" />
+            
+            </div>
+
+
+
+            <div class="form-item box-item">
+              <input type="text" name="CGPA" placeholder="CGPA*" value=""
+              required="" />
+            
+            </div>
+
+            <div class="form-item box-item">
+              <input type="text" name="Backlogs" placeholder="Number of Backlogs*" value=""
+              required="" />
+            
+            </div>
+
+
+            <div class="form-item box-item">
+              <input
+                type="text"
+                name="Phone"
+                placeholder="Whatsapp Number"
+                value=""
+                required=""
+                data-count="10"
+              />
+         
+
+
+            <h2>Skills</h2>
+            
+            <div class="form-item box-item">
+              <input type="text" name="Skill-1" placeholder="Skill-1*" value=""
+              required="" />
+            
+            </div>
+
+            <div class="form-item box-item">
+              <input type="text" name="Skill-2" placeholder="Skill-2*" value=""
+              required="" />
+            
+            </div>
+
+            <div class="form-item box-item">
+              <input type="text" name="Skill-3" placeholder="Skill-3*" value=""
+              required="" />
+            
+            </div>
+
+            <div class="form-item box-item">
+              <input type="text" name="Skill-4" placeholder="Skill-4*" value=""
+              required="" />
+            
+            </div>
+
+
+            <div class="form-item box-item">
+              <input type="text" name="Skill-5" placeholder="Skill-5*" value=""
+              required="" />
+            
+            </div>
+
+
+
+            <div class="form-item box-item">
+              <input type="text" name="Skill-6" placeholder="Skill-6*" value=""
+              required="" />
+            
+            </div>
+
+
+
+
+
+
+
+
+     
+
+             
+            </div>
+
+            <div class="form-item" style="align-self: center;"> <input type="submit"
+              <span  id="submit" value="Submit" class="submit"></span>
+            </div>
+          </form>
+        </main>
+              <!-- <i class="wave"></i> -->
+
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwsv0a5cC2_iZVgLz8A_7WOObqxO3LjT1IT1EmSGcvrmYp-pvWL-KrQU4Edp-evCLydXQ/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => (window.location.href = "thanks.html"))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

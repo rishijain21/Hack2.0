@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Thanks</title>
+  </head>
+  <body>
+    <div class="row">
+      <section class="section">
+        <header>
+          <h3 style="text-align: center;">Thank You</h3>
+
+        </header>
+
+        
+       
+      </section>
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzh2YRv1BQ9-sSSaN4L3ikr57QeU5JXweQpjcQ48mXknU9wPIXUpjkNl-1IR_QUvfA/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => (window.location.href = "www.google.com"))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
